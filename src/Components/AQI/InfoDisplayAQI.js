@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import Info from './Info';
+import InfoAQI from './InfoAQI';
 
 const Display = styled.div`
 	min-height: 45vh;
@@ -9,16 +9,14 @@ const Display = styled.div`
 	background: white;
 	opacity: 0.8;
 	margin: 20px;
-	box-shadow: 0 8px black;
 	border-radius: 8px;
-	padding: 8px;
 	opacity: 0.8;
 	text-align: center;
 	display: flex;
 	flex-flow: column;
 `;
 
-class InfoDisplay extends Component {
+class InfoDisplayAQI extends Component {
 	state = {
 		aqi: null,
 	};
@@ -34,11 +32,11 @@ class InfoDisplay extends Component {
 		return (
 			<div>
 				<Display>
-					<Info data={this.state.aqi} />
+					<InfoAQI data={this.state.aqi} />
 				</Display>
 			</div>
 		);
 	}
 }
 
-export default InfoDisplay;
+export default InfoDisplayAQI;

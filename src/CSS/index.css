@@ -1,0 +1,9 @@
+body {
+	margin: 0;
+	background: #eaeff4;
+	display: flex;
+	flex-flow: wrap row;
+	justify-content: center;
+	background-image: url('../images/weather3.jpg');
+	background-size: cover;
+}
