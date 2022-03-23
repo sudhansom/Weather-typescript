@@ -26,7 +26,7 @@ export type WeatherInfo = {
 };
 type ApiResponse = {
   count: number;
-  data: WeatherInfo[];
+  data: null | WeatherInfo[];
 };
 
 class InfoDisplayAQI extends Component {
