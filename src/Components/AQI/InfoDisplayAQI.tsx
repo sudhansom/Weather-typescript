@@ -15,19 +15,6 @@ const Display = styled.div`
   display: flex;
   flex-flow: column;
 `;
-export type WeatherInfo = {
-  aqi: number;
-  pm10: number;
-  pm25: number;
-  no2: number;
-  co: number;
-  o3: number;
-  so2: number;
-};
-type ApiResponse = {
-  count: number;
-  data: WeatherInfo[];
-};
 
 class InfoDisplayAQI extends Component {
   state = {
@@ -35,7 +22,7 @@ class InfoDisplayAQI extends Component {
   };
   componentDidMount() {
     axios
-      .get<ApiResponse>(
+      .get(
         "https://api.weatherbit.io/v2.0/current/airquality?city=Helsinki&key=12b3830093e741069ba73debc71898a8"
       )
       .then((res) => this.setState({ aqi: res.data.data[0] }));

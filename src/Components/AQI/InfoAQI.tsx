@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { WeatherInfo } from "./InfoDisplayAQI";
 
 const Wrapper = styled.div`
   display: flex;
@@ -35,12 +34,20 @@ const Wrapper2 = styled(Wrapper1)`
   background: #49739a;
   margin: 20px;
 `;
-
-type InfoAQIProps = {
-  data: WeatherInfo;
+type TData = {
+  aqi: number;
+  pm10: number;
+  pm25: number;
+  no2: number;
+  so2: number;
+  co: number;
+  o3: number;
+};
+type TInfoAQIProps = {
+  data: null | TData;
 };
 
-function InfoAQI({ data }: InfoAQIProps) {
+function InfoAQI({ data }: TInfoAQIProps) {
   return (
     <Wrapper>
       <BackgroundWeather>
